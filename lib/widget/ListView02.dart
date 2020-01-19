@@ -1,25 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(
-        appBar: AppBar(),
-        body: HomeWidget(),
-      ),
-    );
-  }
-}
-
-class HomeWidget extends StatelessWidget {
+class HomeWidgetListView extends StatelessWidget {
   _onPressed() {
     print('Clicado no Item ');
   }
@@ -42,7 +23,6 @@ class HomeWidget extends StatelessWidget {
       height: double.infinity,
       width: double.infinity,
       child: ListView(
-           
         children: <Widget>[
           _listTile(),
           _listTile(),

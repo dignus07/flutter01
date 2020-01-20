@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:helloword/widget/button-text-icon.dart';
 
+import 'buttonMaterial.dart';
+
 class HomeWidgetDesafioClip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -49,12 +51,13 @@ class HomeWidgetDesafioClip extends StatelessWidget {
           //     color: Colors.blue,
           //   ),
           // ),
-          BottonTextIcon(
-            color: Colors.blue,
-            iconColor: Colors.white,
-            iconData: Icons.arrow_back,
-            text: 'VOLTAR',
-          ),
+          // BottonTextIcon(
+          //   color: Colors.blue,
+          //   iconColor: Colors.white,
+          //   iconData: Icons.arrow_back,
+          //   text: 'VOLTAR',
+          // ),
+          ButtonMaterial(),
         ],
       ),
     );

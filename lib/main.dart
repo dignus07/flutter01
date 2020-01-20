@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'clipes/ClipPathHome.dart';
 import 'clipes/clipDesafio.dart';
 import 'clipes/clipRRect.dart';
 import 'clipes/ovalclip.dart';
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
         // body: HomeWidgetListView(),
         // body: HomeWidgetOvalClip(),
         // body: HomeWidgetOvalRRect(),
-        body: HomeWidgetDesafioClip(),
+        // body: HomeWidgetDesafioClip(),
+        body: ClipPathHome(),
       ),
     );
   }

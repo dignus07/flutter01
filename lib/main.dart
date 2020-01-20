@@ -19,9 +19,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Conta de usuário'),
-        ),
+        // appBar: AppBar(
+        //   title: Text('Conta de usuário'),
+        // ),
         // body: HomeWidgetListView(),
         // body: HomeWidgetOvalClip(),
         // body: HomeWidgetOvalRRect(),

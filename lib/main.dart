@@ -1,32 +1,97 @@
 import 'package:flutter/material.dart';
-import 'clipes/ClipPathHome.dart';
-import 'clipes/clipDesafio.dart';
-import 'clipes/clipRRect.dart';
-import 'clipes/ovalclip.dart';
-import 'widget/ListView02.dart';
+
+import 'material/AppBar.dart';
+import 'material/BodyWidget.dart';
+import 'widget/CutomCircleAvatar.dart';
+
 // import 'widget/scrollDirectionHorizontal.dart';
 
 void main() => runApp(MyApp());
+var i = 0;
 
-// nome do Professor Jacob Moura
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        accentColor: Colors.blueAccent,
+        //fontFamily: 'Roboto',
       ),
       home: Scaffold(
-        // appBar: AppBar(
-        //   title: Text('Conta de usuário'),
-        // ),
-        // body: HomeWidgetListView(),
-        // body: HomeWidgetOvalClip(),
-        // body: HomeWidgetOvalRRect(),
-        // body: HomeWidgetDesafioClip(),
-        body: ClipPathHome(),
+        drawer: Drawer(
+          // Add a ListView to the drawer. This ensures the user can scroll
+          // through the options in the drawer if there isn't enough vertical
+          // space to fit everything.
+          child: ListView(
+            // Important: Remove any padding from the ListView.
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              DrawerHeader(
+                child: Column(
+                  children: <Widget>[
+                    CutomCircleAvatar(
+                      size: 90,
+                      // child: Image.asset('assets/images.jpeg'),
+                    ),
+                    Container(height: 5),
+                    Text(
+                      'Fregues da Silva ',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    Container(height: 5),
+                    Text(
+                      'silvafregues@gmail.com',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+              ),
+              ListTile(
+                title: Text('Item 1'),
+                onTap: () {
+                  // Update the state of the app.
+                  // ...
+                },
+              ),
+              ListTile(
+                title: Text('Item 2'),
+                onTap: () {
+                  // Update the state of the app.
+                  // ...
+                },
+              ),
+            ],
+          ),
+        ),
+        appBar: AppBarWidget(),
+        body: BodyWidget(),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.phone_android),
+          onPressed: () {
+            i++;
+            print('pertei $i vezes');
+          },
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              title: Text('Home'),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.perm_camera_mic),
+              title: Text('Bomde'),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle),
+              title: Text('Profile'),
+            ),
+          ],
+        ),
       ),
     );
   }

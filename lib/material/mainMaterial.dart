@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:helloword/widget/CutomCircleAvatar.dart';
 
-import 'material/AppBar.dart';
-import 'material/BodyWidget.dart';
-import 'widget/CutomCircleAvatar.dart';
+import 'AppBar.dart';
+import 'BodyWidget.dart';
+
+
 
 // import 'widget/scrollDirectionHorizontal.dart';
 
@@ -99,3 +101,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+

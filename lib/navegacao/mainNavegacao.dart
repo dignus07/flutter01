@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'SnackBar/HomeWidgetSnackBar.dart';
+import 'HomeWidgetNavegacao.dart';
 
 
 
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
-      home: HomeWidgetSnackbarDialog(),
+      home: HomeWidgetNavegacao(),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:helloword/src/animacoes/implicitas/HomeWidget.dart';
 
-import 'animacoes/implicitas/HomeWidgetFeitoPorMim.dart';
 
 
 void main() => runApp(MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: HomeWidgetFeitoPorMim(),
+      home: HomeWidget(),
     );
   }
 }

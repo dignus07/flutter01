@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'SnackBar/HomeWidgetSnackBar.dart';
-
-
+import 'animacoes/implicitas/HomeWidgetFeitoPorMim.dart';
 
 
 void main() => runApp(MyApp());
@@ -12,9 +10,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.red,
       ),
-      home: HomeWidgetSnackbarDialog(),
+      home: HomeWidgetFeitoPorMim(),
     );
   }
 }

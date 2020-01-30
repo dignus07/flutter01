@@ -12,7 +12,7 @@ class _HomeWidgetSnackbarDialogState extends State<HomeWidgetSnackbarDialog> {
     return Scaffold(
         key: _scaffoldKey,
         appBar: AppBar(
-          title: Text("SnackBar"),
+          title: Text("SnackBar e Dialog"),
         ),
         body: Container(
           height: double.infinity,
@@ -47,7 +47,23 @@ class _HomeWidgetSnackbarDialogState extends State<HomeWidgetSnackbarDialog> {
               RaisedButton(
                 textColor: Colors.white,
                 color: Colors.purple,
-                onPressed: () {},
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: Text('Hei Dialog! '),
+                        content: Text('Conteúdo do Dioalog!'),
+                        actions: <Widget>[
+                          FlatButton(
+                            onPressed: () => Navigator.pop(context),
+                            child: Text('OK'),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
                 child: Text("Hey Dialog"),
               ),
             ],
